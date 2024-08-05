@@ -1,0 +1,22 @@
+.carta {
+    background-color: lightblue;
+	outline: 2px solid blue;
+	display: flex;
+	align-items: center;
+}
+
+/*----------  Iconos  ----------*/
+
+.iconos {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 2rem;
+
+	> app-opcion-menu {
+		width: 25%;
+		height: 25%;
+		max-height: 200px;
+	}
+}

@@ -1,0 +1,95 @@
+<main class="flex flex-col gap-3 justify-center items-center relative flex-wrap" [style]="'color: ' + colorLetras + '; background-color: ' + colorFondo">
+    <img [src]="icono" [alt]="'Icono ' + titulo">
+    @if (!infoDeshabilitada) {
+        <span class="material-icons absolute top-0 right-0 p-2 hover:text-yellow-500" (click)="info()">info</span>
+    }
+    <h3 class="text-wrap absolute bottom-0 p-2 rounded" [style]="'background-color: ' + colorFondoLetras">{{titulo}}</h3>
+</main>
+
+<p-dialog [maximizable]="true" styleClass="p-5" [modal]="true" [(visible)]="visibleInfo" keepInViewport draggable="false">
+    <ng-template pTemplate="header">
+        <h1 class="text-center w-full">Cómo jugar a <span class="text-white bg-black rounded px-2">{{titulo}}</span></h1>
+    </ng-template>
+    <div class="py-5">
+        @switch (titulo) {
+          @case ('Tabú') {
+            <ul>
+                <li><span class="font-bold">Objetivo:</span> Hacer que tu equipo adivine una palabra sin usar palabras prohibidas.</li>
+                <li>
+                    <p class="font-bold">Juego:</p>
+                    <ul>
+                        <li>Un jugador (presentador) describe la palabra en la tarjeta sin usar las palabras prohibidas.</li>
+                        <li>Su equipo intenta adivinar la palabra.</li>
+                        <li>Si el presentador usa una palabra prohibida, la ronda termina o el equipo pierde un punto.</li>
+                    </ul>
+                </li>
+            </ul>
+          }
+          @case ('Mímica y sonido') {
+            <ul>
+                <li><span class="font-bold">Objetivo:</span> Hacer que tu equipo adivine una palabra o frase sin usar palabras.</li>
+                <li>
+                    <p class="font-bold">Juego:</p>
+                    <ul>
+                        <li><span class="font-bold">Mímica:</span> Actúa la palabra o frase usando solo gestos.</li>
+                        <li><span class="font-bold">Sonido:</span> Emite sonidos para representar la palabra o frase, sin hablar.</li>
+                        <li>Su equipo intenta adivinar la palabra o frase.</li>
+                    </ul>
+                </li>
+            </ul>
+          }
+          @case ('Pintar') {
+            <ul>
+                <li><span class="font-bold">Objetivo:</span> Hacer que tu equipo adivine una palabra o frase a través de dibujos.</li>
+                <li>
+                    <p class="font-bold">Juego:</p>
+                    <ul>
+                        <li>Un jugador dibuja la palabra o frase en la tarjeta sin usar letras ni números.</li>
+                        <li>Su equipo intenta adivinar la palabra o frase basándose en el dibujo.</li>
+                    </ul>
+                </li>
+            </ul>
+          }
+          @case ('Marcas') {
+            <ul>
+                <li><span class="font-bold">Objetivo:</span> Hacer que tu equipo adivine la mayor cantidad de marcas o productos basado en una categoría.</li>
+                <li>
+                    <p class="font-bold">Juego:</p>
+                    <ul>
+                        <li>Un jugador nombra marcas o productos relacionados con una categoría dada, por ejemplo "Coches".</li>
+                        <li>Su equipo intenta adivinar las marcas mencionadas, como "Volvo" o "Ferrari".</li>
+                    </ul>
+                </li>
+            </ul>
+          } 
+          @case ('Preguntas') {
+            <ul>
+                <li><span class="font-bold">Objetivo:</span> Se tiene que dar una respuesta correcta a la pregunta formulada por el contrario.</li>
+                <li>
+                    <p class="font-bold">Juego:</p>
+                    <ul>
+                        <li>El equipo deberá tener un <span class="font-bold">portavoz</span>, que es el que se encargará de dar la respuesta final a la pregunta.</li>
+                        <li>El equipo podrá debatir, pero el único que tiene voz para dar la respuesta es el portavoz.</li>
+                    </ul>
+                </li>
+            </ul>
+          }
+          @case ('@currencias') {
+            <ul>
+                <li><span class="font-bold">Objetivo:</span> Se debe acertar el mayor número de respuestas correctas para ir sumando puntos.</li>
+                <li>
+                    <p class="font-bold">Juego:</p>
+                    <ul>
+                        <li>El equipo contrario tomará la carta para comprobar las respuestas correctas.</li>
+                        <li>El equipo deberá acertar todas las ocurrencias relacionadas con un tema en concreto. Por ejemplo: Francia: Torre Eiffel, Baguette, etc.</li>
+                        <li>Se mostrará un número aleatorio, y si el número de respuesta coincide con ese número, esa respuesta vale doble.</li>
+                    </ul>
+                </li>
+            </ul>
+          }
+          @default {
+            <p class="text-xl">Algo va mal. Por favor, notifícamelo.</p>
+          }
+        }
+    </div>
+</p-dialog>

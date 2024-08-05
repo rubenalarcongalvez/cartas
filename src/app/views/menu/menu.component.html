@@ -1,0 +1,20 @@
+<main class="carta">
+    <h1 class="p-10">Tipos de cartas</h1>
+    <section class="iconos">
+        <!-- <li>&#64;currencias</li> -->
+        <!-- <li>Opciones (Poner para ajustar cuántas cartas se pueden pasar como máximo por categoría, también para elegir el modo de juego, si por puntos o por acierto simple en tabú, mímica, pintar y preguntas. También para poder seleccionar el máximo de descartes por cada juego)</li> -->
+         <!-- Cuando clicas en el tipo de carta, se le puede dar la vuelta para verla o ir atrás. -->
+          <!-- Utilizar sonidos de cuenta atrás (deshabilitable en opciones) -->
+           <!-- Utilizar sonido de alarma para cuando termina el tiempo pero has acertado alguna -->
+            <!-- Utilizar sonido de alarma para cuando termina y has fracasado -->
+            <!-- Utilizar sonido de acierto y de fallo, y otro de skip -->
+        <app-opcion-menu titulo="Tabú" colorFondo="black" colorLetras="white" icono="tabu.png"></app-opcion-menu>
+        <app-opcion-menu titulo="Mímica y sonido" colorFondo="black" colorLetras="white" icono="mimica.png"></app-opcion-menu>
+        <app-opcion-menu titulo="Pintar" colorFondo="black" colorLetras="white" icono="pintar.png"></app-opcion-menu>
+        <app-opcion-menu titulo="Marcas" colorFondo="black" colorLetras="white" icono="marcas.png"></app-opcion-menu>
+        <app-opcion-menu titulo="Preguntas" colorFondo="black" colorLetras="white" icono="preguntas.png"></app-opcion-menu>
+        <app-opcion-menu titulo="@currencias" colorFondo="black" colorLetras="white" icono="ocurrencias.png"></app-opcion-menu>
+        <app-opcion-menu titulo="Aleatorio" colorFondo="orange" colorLetras="black" icono="aleatorio.png" colorFondoLetras="white" [infoDeshabilitada]="true"></app-opcion-menu>
+        <app-opcion-menu titulo="Opciones" colorFondo="white" colorLetras="black" icono="opciones.png" colorFondoLetras="white" [infoDeshabilitada]="true"></app-opcion-menu>
+    </section>
+</main>
