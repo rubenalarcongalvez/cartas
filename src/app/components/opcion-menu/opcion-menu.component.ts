@@ -1,5 +1,7 @@
 import { Component, Input } from '@angular/core';
+import { Router } from '@angular/router';
 import { DialogModule } from 'primeng/dialog';
+import { convertirEnURL } from '../../shared/util/utilidades';
 
 @Component({
   selector: 'app-opcion-menu',
@@ -18,7 +20,13 @@ export class OpcionMenuComponent {
 
   visibleInfo: boolean = false;
 
+  constructor(private router: Router) {}
+
   info() {
     this.visibleInfo = true;
+  }
+
+  navegarAJuego() {
+    this.router.navigateByUrl(convertirEnURL(this.titulo));
   }
 }

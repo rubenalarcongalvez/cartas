@@ -8,12 +8,12 @@
            <!-- Utilizar sonido de alarma para cuando termina el tiempo pero has acertado alguna -->
             <!-- Utilizar sonido de alarma para cuando termina y has fracasado -->
             <!-- Utilizar sonido de acierto y de fallo, y otro de skip -->
-        <app-opcion-menu titulo="Tabú" colorFondo="black" colorLetras="white" icono="tabu.png"></app-opcion-menu>
-        <app-opcion-menu titulo="Mímica y sonido" colorFondo="black" colorLetras="white" icono="mimica.png"></app-opcion-menu>
-        <app-opcion-menu titulo="Pintar" colorFondo="black" colorLetras="white" icono="pintar.png"></app-opcion-menu>
-        <app-opcion-menu titulo="Marcas" colorFondo="black" colorLetras="white" icono="marcas.png"></app-opcion-menu>
-        <app-opcion-menu titulo="Preguntas" colorFondo="black" colorLetras="white" icono="preguntas.png"></app-opcion-menu>
-        <app-opcion-menu titulo="@currencias" colorFondo="black" colorLetras="white" icono="ocurrencias.png"></app-opcion-menu>
+        <app-opcion-menu [titulo]="juegos.Tabu" colorFondo="black" colorLetras="white" icono="tabu.png"></app-opcion-menu>
+        <app-opcion-menu [titulo]="juegos.MimicaYSonido" colorFondo="black" colorLetras="white" icono="mimica.png"></app-opcion-menu>
+        <app-opcion-menu [titulo]="juegos.Pintar" colorFondo="black" colorLetras="white" icono="pintar.png"></app-opcion-menu>
+        <app-opcion-menu [titulo]="juegos.Marcas" colorFondo="black" colorLetras="white" icono="marcas.png"></app-opcion-menu>
+        <app-opcion-menu [titulo]="juegos.Preguntas" colorFondo="black" colorLetras="white" icono="preguntas.png"></app-opcion-menu>
+        <app-opcion-menu [titulo]="juegos.Ocurrencias" colorFondo="black" colorLetras="white" icono="ocurrencias.png"></app-opcion-menu>
         <app-opcion-menu titulo="Aleatorio" colorFondo="orange" colorLetras="black" icono="aleatorio.png" colorFondoLetras="white" [infoDeshabilitada]="true"></app-opcion-menu>
         <app-opcion-menu titulo="Opciones" colorFondo="white" colorLetras="black" icono="opciones.png" colorFondoLetras="white" [infoDeshabilitada]="true"></app-opcion-menu>
     </section>

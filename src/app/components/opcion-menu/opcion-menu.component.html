@@ -1,9 +1,9 @@
 <main class="flex flex-col gap-3 justify-center items-center relative flex-wrap" [style]="'color: ' + colorLetras + '; background-color: ' + colorFondo">
-    <img [src]="icono" [alt]="'Icono ' + titulo">
+    <img (click)="navegarAJuego()" [src]="icono" [alt]="'Icono ' + titulo">
     @if (!infoDeshabilitada) {
         <span class="material-icons absolute top-0 right-0 p-2 hover:text-yellow-500" (click)="info()">info</span>
     }
-    <h3 class="text-wrap absolute bottom-0 p-2 rounded" [style]="'background-color: ' + colorFondoLetras">{{titulo}}</h3>
+    <h3 (click)="navegarAJuego()" class="text-wrap absolute bottom-0 p-2 rounded" [style]="'background-color: ' + colorFondoLetras">{{titulo}}</h3>
 </main>
 
 <p-dialog [maximizable]="true" styleClass="p-5" [modal]="true" [(visible)]="visibleInfo" keepInViewport draggable="false">

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { OpcionMenuComponent } from '../../components/opcion-menu/opcion-menu.component';
+import { Juegos } from '../../shared/enums/juegos-enum';
 
 @Component({
   selector: 'app-menu',
@@ -9,5 +10,5 @@ import { OpcionMenuComponent } from '../../components/opcion-menu/opcion-menu.co
   styleUrl: './menu.component.scss'
 })
 export class MenuComponent {
-
+  juegos: typeof Juegos = Juegos;
 }
